@@ -16,13 +16,20 @@ missing textures/arc, out-of-frame markers, sloppy cuts). The renderer/brain rea
 | `workflows/REFERENCE_TO_PROMPT_v1.md` | Image-conditioned ingest → prompt method. |
 | `workflows/DESIGN_QC_LOOP_v1.md` | Closed-loop render→score→re-prompt. The art-director gate. |
 
+## Deployment (wires the brain into the live engine)
+| File | Role |
+|---|---|
+| `deploy/sync_render_brain.sh` | Copies render-brain + skills into `/opt/factory`, builds `PRIMER.md`. |
+| `deploy/INTEGRATION.md` | How `brain_bridge` primes the design brain + enforces the QC gate. |
+
 ## Skills
 | File | Role | Status |
 |---|---|---|
 | `skills/LYSIEN_HERO_ART_v2.md` | Artistic director — owns render pipeline + reject rights | active |
 | `skills/LYSIEN_HERO_ART_v1.md` | Original brand slogan | superseded by v2 |
 | `skills/FACTORY_WORKFLOW_v1.md` | Evidence-first orchestration, paths, providers | active |
-| `skills/MULTI_AGENT_v1.md` | Claude+ChatGPT+renderer handoff | active (see note) |
+| `skills/MULTI_AGENT_v2.md` | Orchestration wired to render-brain + QC loop + doctrine select | active |
+| `skills/MULTI_AGENT_v1.md` | Original one-shot handoff | superseded by v2 |
 | `skills/PLANNING_WITH_FILES_v1.md` | Durable task state (was broken/empty) | active (fixed) |
 | `skills/SSOT_KEEPER_v1.md` | Living docs + evidence trail | active |
 | `skills/EXECUTE_NO_BULLSHIT_v1.md` | Bias-to-action operating mode | active |
@@ -36,8 +43,7 @@ missing textures/arc, out-of-frame markers, sloppy cuts). The renderer/brain rea
 | `skills/WEB_RESEARCH_v1.md` | Research helper | active |
 
 ## Notes / open follow-ups
-- **MULTI_AGENT_v1** describes one-shot text-to-image. The QC loop + image-conditioning in
-  `workflows/` are the upgrade; MULTI_AGENT should be revised to call them. (next pass)
+- MULTI_AGENT is now v2 and calls the new workflows + priming (done).
 - **Renderer:** production uses Ideogram on the server (`/opt/factory`). In Claude-Code-on-web
   sessions, stronger photoreal models are reachable via the Gamma image backends
   (gemini-3-pro-image-hd, gpt-image-1-high, flux-2-pro, imagen-4-ultra) — candidate upgrade
