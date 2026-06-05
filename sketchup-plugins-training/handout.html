@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: A4; margin: 1.4cm 1.5cm; }
+  body { font-family: "DejaVu Sans", sans-serif; font-size: 10pt; color: #1a1a1a; line-height: 1.4; }
+  h1 { font-size: 19pt; color: #0b4f6c; margin: 0 0 2pt 0; }
+  h2 { font-size: 13pt; color: #0b4f6c; border-bottom: 2px solid #0b4f6c; padding-bottom: 2pt; margin: 16pt 0 6pt 0; }
+  h3 { font-size: 11pt; color: #b3541e; margin: 10pt 0 3pt 0; }
+  .sub { font-size: 10pt; color: #555; margin: 0 0 6pt 0; }
+  .lead { background: #eef5f8; border-left: 4px solid #0b4f6c; padding: 7pt 10pt; margin: 8pt 0; font-size: 10pt; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0; }
+  th { background: #0b4f6c; color: #fff; text-align: left; padding: 4pt 6pt; font-size: 9pt; }
+  td { border: 1px solid #cfd8dc; padding: 4pt 6pt; font-size: 9pt; vertical-align: top; }
+  tr:nth-child(even) td { background: #f5f8fa; }
+  .ess { color: #1b7a3d; font-weight: bold; }
+  .use { color: #b3541e; font-weight: bold; }
+  .opt { color: #6a6a6a; font-weight: bold; }
+  .avoid { color: #c0392b; font-weight: bold; }
+  .pill { display: inline-block; background: #0b4f6c; color: #fff; padding: 1pt 6pt; border-radius: 8pt; font-size: 8.5pt; }
+  .box { border: 1px solid #cfd8dc; border-radius: 4pt; padding: 7pt 10pt; margin: 6pt 0; }
+  .warn { background: #fdf3f2; border-left: 4px solid #c0392b; padding: 7pt 10pt; margin: 6pt 0; }
+  .ok { background: #f0f8f2; border-left: 4px solid #1b7a3d; padding: 7pt 10pt; margin: 6pt 0; }
+  ul { margin: 3pt 0 3pt 0; padding-left: 16pt; }
+  li { margin: 1.5pt 0; }
+  .small { font-size: 8.5pt; color: #666; }
+  .pagebreak { page-break-before: always; }
+  .num { background: #0b4f6c; color:#fff; border-radius: 50%; padding: 0 5pt; font-weight: bold; }
+  .cols { width:100%; }
+  .cols td { border: none; width: 33%; vertical-align: top; padding: 0 6pt 0 0; }
+</style>
+</head>
+<body>
+
+<h1>SketchUp Plugins — Οδηγός Γραφείου</h1>
+<p class="sub">Πρακτικός οδηγός για αρχιτέκτονες · SketchUp <b>2026</b> · Έκδοση 2026</p>
+
+<div class="lead">
+<b>Η χρυσή αρχή:</b> Πρώτα <b>υγιεινή μοντέλου</b> → μετά <b>ταχύτητα</b> → τελευταία <b>οπτικοποίηση</b>.
+Μην εγκαθιστάτε 20 plugins την πρώτη μέρα. Βάζουμε plugin <b>μόνο εκεί που το native SketchUp αποτυγχάνει
+ή είναι πολύ αργό</b>. Λίγα, επαληθευμένα εργαλεία — πάνω σε πραγματικό αρχείο γραφείου.
+</div>
+
+<h2>1. Το πλάνο σε 3 επίπεδα</h2>
+<table>
+<tr><th style="width:18%">Επίπεδο</th><th style="width:42%">Plugins</th><th>Σκοπός</th></tr>
+<tr><td><b>Minimum</b><br><span class="small">Day 1 · δωρεάν</span></td>
+<td>TT_Lib² → CleanUp³ → Solid Inspector²</td>
+<td>Καθαρά, σταθερά, ελαφριά αρχεία. Μηδέν κόστος, άμεσο κέρδος.</td></tr>
+<tr><td><b>Recommended</b><br><span class="small">καθημερινή παραγωγή</span></td>
+<td>+ Profile Builder 4, FlexTools Pro, <b>ένας</b> renderer (D5 / Enscape / V-Ray), Architextures</td>
+<td>Γρήγορη παραγωγή μελετών & κατασκευαστικών, υλικά, παρουσιάσεις.</td></tr>
+<tr><td><b>Advanced</b><br><span class="small">visualization/landscape</span></td>
+<td>+ Joint Push Pull / Curviloft, Skatter 2, PlaceMaker, Skimp, Quantifier Pro, Artisan 2</td>
+<td>Σύνθετες επιφάνειες, περιβάλλον χώρου, βαριά assets, μετρήσεις.</td></tr>
+</table>
+
+<div class="ok">
+<b>Τι διδάσκουμε ΠΡΩΤΑ:</b> τη ροή <b>DWG → CleanUp³ → Solid Inspector² → Profile Builder 4</b>.
+Όταν δουν τον τοίχο 3 στρώσεων να γίνεται σε δευτερόλεπτα, υιοθετούν τη νέα ροή.
+</div>
+
+<h2>2. Τα βασικά εργαλεία με μια ματιά</h2>
+<table>
+<tr><th style="width:16%">Plugin</th><th style="width:24%">Τι κάνει</th><th style="width:15%">Κόστος*</th><th style="width:9%">SU 2026</th><th style="width:14%">Verdict</th><th>Προσοχή</th></tr>
+
+<tr><td><b>TT_Lib²</b></td><td>Βιβλιοθήκη-υπόβαθρο (όχι UI)</td><td>Δωρεάν</td><td>Ναι</td><td class="ess">Essential</td><td>Εγκατάσταση <b>πρώτη</b>, πριν το CleanUp³.</td></tr>
+
+<tr><td><b>CleanUp³</b></td><td>Purge, καθάρισμα, μείωση μεγέθους</td><td>Δωρεάν</td><td>Ναι</td><td class="ess">Essential</td><td>Απαιτεί TT_Lib². Τρέξε σε <b>αντίγραφο</b>.</td></tr>
+
+<tr><td><b>Solid Inspector²</b></td><td>Διόρθωση γεωμετρίας / στερεών</td><td>Δωρεάν</td><td>Πιθανό**</td><td class="ess">Essential</td><td>Αυτόνομο (δεν θέλει TT_Lib²). Τρέξε πριν export/render.</td></tr>
+
+<tr><td><b>Profile Builder 4</b></td><td>Παραμετρικοί τοίχοι, προφίλ, κιγκλιδώματα</td><td>~$119 perpetual</td><td>Ναι</td><td class="ess">Essential</td><td>Το <b>explode</b> χάνει την παραμετρικότητα.</td></tr>
+
+<tr><td><b>FlexTools Pro</b></td><td>Δυναμικά κουφώματα + WallCutter</td><td>~€99/έτος</td><td>Ναι</td><td class="use">Recommended</td><td>Όχι trial, αλλά 30-day money-back. Subscription.</td></tr>
+
+<tr><td><b>Architextures</b></td><td>Seamless παραμετρικά υλικά</td><td>Ext. δωρεάν · Pro ~£66/έτος</td><td>Ναι</td><td class="use">Useful</td><td>Εμπορική χρήση → Pro. Θέλει internet.</td></tr>
+
+<tr><td><b>Joint Push Pull</b><br><span class="small">(Fredo6)</span></td><td>Push/Pull σε καμπύλες/πολλαπλές όψεις</td><td>~$12 / $40 bundle</td><td>Ναι</td><td class="opt">Optional</td><td>Θέλει LibFredo6 ≥15.3 + SketchUcation License.</td></tr>
+
+<tr><td><b>Curviloft</b><br><span class="small">(Fredo6)</span></td><td>Loft / skinning από contours</td><td>~$12 / $40 bundle</td><td>Verify**</td><td class="opt">Optional</td><td>Ίδιο license model με Joint Push Pull.</td></tr>
+
+<tr><td><b>Skimp</b></td><td>Import + μείωση πολυγώνων βαριών assets</td><td>Perpetual/sub</td><td>Ναι</td><td class="opt">Optional</td><td>Επιθετική μείωση → καταστροφή UV.</td></tr>
+
+<tr><td><b>Skatter 2</b></td><td>Διασπορά βλάστησης/entourage</td><td>€149 / €99 έτος</td><td>Ναι</td><td class="opt">Optional</td><td>Χρήση <b>Render-Only</b>, αλλιώς κολλάει το αρχείο.</td></tr>
+
+<tr><td><b>PlaceMaker</b></td><td>Site context (terrain, 3D κτίρια)</td><td>Credits ή ~$109/έτος</td><td>Verify**</td><td class="opt">Optional</td><td>Εξαρτάται από εξωτερικά δεδομένα.</td></tr>
+
+<tr><td><b>Quantifier Pro</b></td><td>Προμετρήσεις & κοστολόγηση</td><td>~€79 perpetual</td><td>Verify**</td><td class="opt">Optional</td><td>Bundle με Profile Builder (έκπτωση).</td></tr>
+
+<tr><td><b>Artisan 2</b></td><td>Οργανικά / subdivision / terrain</td><td>~$99/έτος</td><td>Ναι**</td><td class="opt">Optional</td><td>Το «v2» αντικαθιστά το παλιό του 2011. Βαρύ.</td></tr>
+
+<tr><td><b>1001bit Tools</b></td><td>Σκάλες, στέγες, περσίδες (γρήγορα)</td><td>Free / Pro ~$48</td><td class="avoid">Stale</td><td class="avoid">Test first</td><td><b>Legacy</b> (τελ. build Απρ. 2022). Μη-παραμετρικό.</td></tr>
+</table>
+<p class="small">* Όλες οι τιμές ενδεικτικές — <b>επιβεβαιώστε live πριν την αγορά</b>. &nbsp; ** «SU 2026» δεν είναι 100% επιβεβαιωμένο στη σελίδα του developer — ελέγξτε ότι λέει ρητά «SketchUp 2026» στο Extension Warehouse.</p>
+
+<div class="pagebreak"></div>
+
+<h2>3. Rendering — διάλεξε ΕΝΑ (έλεγξε πρώτα το hardware!)</h2>
+<div class="warn">
+<b>Κανόνας #1:</b> Rendering χωρίς έλεγχο κάρτας γραφικών & VRAM = crashes. Πρώτα μάζεψε τα specs των μηχανημάτων
+(GPU, VRAM, Windows/Mac, Intel ή Apple Silicon). Διαλέγουμε <b>μία</b> engine — όχι τρεις μαζί.
+</div>
+<table>
+<tr><th style="width:16%">Engine</th><th style="width:12%">SU 2026</th><th style="width:16%">Δωρεάν;</th><th style="width:14%">Mac;</th><th style="width:20%">GPU</th><th>Σημείωση</th></tr>
+<tr><td><b>D5 Render</b></td><td>Ναι</td><td><b>Ναι</b> (Community)</td><td>Όχι (Windows only)</td><td>RTX 3060 Ti+</td><td>Δωρεάν tier = <b>non-commercial</b>. Pro ~$360/έτος.</td></tr>
+<tr><td><b>Enscape</b></td><td>Ναι (4.13+)</td><td>Όχι (~$575/έτος)</td><td>Ναι (μόνο Apple Silicon)</td><td>4GB min, 8GB+ RTX</td><td>Real-time, εύκολα walkthroughs.</td></tr>
+<tr><td><b>V-Ray 7</b></td><td>Ναι</td><td>Όχι (~$540/έτος)</td><td>Ναι (Metal)</td><td>RTX για GPU mode</td><td><b>Περιλαμβάνεται στο SketchUp Studio</b> (Windows).</td></tr>
+<tr><td><b>SketchUp Diffusion</b><br><span class="small">«AI Render»</span></td><td>Ναι (ext.)</td><td>Όχι (Go/Pro/Studio + credits)</td><td>Ναι (cloud)</td><td>—</td><td>Γρήγορα concept visuals. 5 credits/εικόνα + internet.</td></tr>
+</table>
+<p class="small"><b>Σύσταση:</b> Windows + καλή κάρτα & μηδενικό κόστος → <b>D5</b>. &nbsp; Mac ή ομαλά walkthroughs → <b>Enscape</b>. &nbsp; Top φωτορεαλισμός με Studio → <b>V-Ray</b>. &nbsp; <b>Diffusion</b> για γρήγορο «σκίτσο» ιδέας.</p>
+
+<h2>4. Τι κάνει ΗΔΗ native το SketchUp 2026 (μην βάζετε περιττά plugins)</h2>
+<table class="cols"><tr>
+<td>
+<div class="box"><b>Solid Tools</b><br><span class="small">Union, Subtract, Trim, Intersect — boolean χωρίς plugin.</span></div>
+<div class="box"><b>Sandbox Tools</b><br><span class="small">Βασικό terrain από ισοϋψείς.</span></div>
+</td>
+<td>
+<div class="box"><b>Section Fills</b><br><span class="small">Γεμισμένες τομές, native από SU 2024.</span></div>
+<div class="box"><b>Overlays</b><br><span class="small">Live πληροφορία στο viewport (από SU 2023).</span></div>
+</td>
+<td>
+<div class="warn" style="margin-top:0"><b>Κανόνας:</b> Επίπεδη επιφάνεια → native Push/Pull. Boolean → Solid Tools. Απλό έδαφος → Sandbox. <b>Plugin μόνο όταν αυτά δεν φτάνουν.</b></div>
+</td>
+</tr></table>
+
+<h2>5. Παγίδες & κανόνες γραφείου</h2>
+<div class="warn">
+<ul>
+<li><b>Legacy:</b> Το 1001bit Tools είναι χρήσιμο αλλά δεν ενημερώνεται από το 2022 → «test before use», όχι core εργαλείο.</li>
+<li><b>Άδειες Fredo6:</b> πληρωμένες + κλειδώνουν σε λογαριασμό SketchUcation → <b>κεντρική διαχείριση από IT</b>.</li>
+<li><b>LibFredo6 πρώτη:</b> εγκατάσταση βιβλιοθήκης πριν τα Fredo6 tools, μετά restart. Λάθος έκδοση = #1 αιτία αποτυχίας.</li>
+<li><b>Πηγές:</b> μόνο Extension Warehouse / SketchUcation — ποτέ rbz από ανεπίσημα blogs.</li>
+<li><b>Subscriptions:</b> αν λήξουν (FlexTools, Architextures, renderers), σταματά η δυναμική επεξεργασία / εμπορική χρήση.</li>
+</ul>
+</div>
+
+<h2>6. Σειρά εγκατάστασης (Day 1 checklist)</h2>
+<div class="ok">
+<span class="num">1</span> <b>TT_Lib²</b> &nbsp;→&nbsp; <span class="num">2</span> <b>CleanUp³</b> &nbsp;→&nbsp; <span class="num">3</span> <b>Solid Inspector²</b>
+&nbsp;→&nbsp; <span class="num">4</span> (με budget) <b>Profile Builder 4</b> &nbsp;→&nbsp; <span class="num">5</span> <b>FlexTools Pro</b>
+&nbsp;→&nbsp; <span class="num">6</span> ένας <b>renderer</b> μετά τον έλεγχο hardware.
+</div>
+
+<h2>7. Τρεις πρακτικές ασκήσεις</h2>
+<h3>Άσκηση 1 — Αρχάριος: «Διάσωση μοντέλου»</h3>
+<p style="margin:2pt 0">Βαρύ/βρόμικο εισαγόμενο μοντέλο → αντίγραφο → CleanUp³ (συντηρητικά) → Solid Inspector² στο κέλυφος → διόρθωση.
+<b>Στόχος:</b> μείωση μεγέθους &gt; 50%.</p>
+<h3>Άσκηση 2 — Μεσαίος: «Παραμετρική όψη»</h3>
+<p style="margin:2pt 0">Από 2D κάνναβο → Profile Builder 4 (τοίχος + περσίδες) → 3 παράθυρα με FlexTools → <b>αλλαγή ύψους ορόφου</b>
+και επιβεβαίωση ότι όλα προσαρμόζονται μόνα τους.</p>
+<h3>Άσκηση 3 — Πραγματικό γραφείο: «Από DWG σε παρουσίαση»</h3>
+<p style="margin:2pt 0">DWG κάτοψη → τοίχοι με Profile Builder → ανοίγματα με FlexTools WallCutter → υλικά με Architextures →
+τελικό CleanUp³ → ένα render (αφού ελεγχθεί το hardware).</p>
+
+<p class="small" style="margin-top:14pt; border-top:1px solid #ccc; padding-top:5pt">
+Τεκμηριωμένο υλικό, διασταυρωμένο από επίσημες πηγές (Extension Warehouse, help.sketchup.com, developer sites,
+SketchUcation, Chaos, D5) — Ιούνιος 2026. Οι τιμές/εκδόσεις αλλάζουν: επιβεβαιώστε live πριν από αγορά ή παρουσίαση.
+</p>
+
+</body>
+</html>
