@@ -35,11 +35,17 @@ cat ~/.ssh/id_ed25519        # ή id_rsa
 **Στο Termius (κινητό):** Settings → Keychain → **+** → Generate key →
 τύπος **Ed25519** → όνομα `phone-termius` → αντίγραψε το **public key**.
 
-**Στον σέρβερ** (από το laptop, με SSH):
+**Στον σέρβερ** (από το laptop, με SSH) — πρώτα κατέβασε αυτόν τον φάκελο:
 
 ```bash
-cd /opt/factory
-git pull
+git clone https://github.com/Mantrador1/davle-factory-skills.git ~/factory-skills
+cd ~/factory-skills
+git checkout claude/factory-server-connection-lhql53
+```
+
+Μετά πρόσθεσε το κλειδί του κινητού:
+
+```bash
 bash resilience/add_backup_key.sh "ssh-ed25519 AAAA... phone-termius"
 ```
 
@@ -74,7 +80,7 @@ sudo -u deploy -i claude auth login
 Μετά:
 
 ```bash
-cd /opt/factory
+cd ~/factory-skills
 sudo bash resilience/setup_remote_control.sh
 ```
 
