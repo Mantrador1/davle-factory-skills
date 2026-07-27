@@ -1,0 +1,26 @@
+[Unit]
+Description=Claude Code Remote Control for DAVLE Factory
+Documentation=https://code.claude.com/docs/en/remote-control
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=deploy
+Group=deploy
+WorkingDirectory=/opt/factory
+
+# claude reads its claude.ai credentials from $HOME/.claude
+Environment=HOME=/home/deploy
+Environment=TERM=xterm-256color
+
+# Remote Control expects an interactive terminal. script(1) allocates a pty
+# so the process behaves the same as when launched by hand.
+ExecStart=/usr/bin/script -qfec "__CLAUDE_BIN__ remote-control --name Factory" /dev/null
+
+# Survive network drops, API hiccups and the ~10 minute outage timeout.
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
