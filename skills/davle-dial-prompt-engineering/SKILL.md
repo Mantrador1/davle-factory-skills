@@ -1,43 +1,49 @@
 ---
 name: davle-dial-prompt-engineering
-description: Convert an approved DAVLE commercial dial concept into a precise image-generation prompt that produces only the watch-face dial artwork. Use immediately before image generation for DAVLE concepts, especially when strict dial-only framing and layout fidelity are required.
+description: Convert an approved DAVLE commercial dial concept into a precise image-generation prompt that produces only the watch-face dial artwork. Use immediately before image generation for DAVLE concepts, especially when strict dial-only framing, hierarchy, geometry, readability, and reproducible prompt controls are required.
 ---
 
 # DAVLE Dial Prompt Engineering
 
 ## Objective
-Produce a generation prompt that preserves the commercial design thesis while enforcing a clean, front-facing dial-only image.
+Produce a generation prompt that preserves the approved commercial thesis while maximizing dial-only compliance, clean geometry, hierarchy, and usefulness as a factory visual reference.
+
+Read `references/prompt-controls.md` when building or correcting a production prompt.
 
 ## Mandatory framing
 Always specify:
-- dial only,
-- straight-on / orthographic front view,
+- dial artwork only,
+- straight-on orthographic front view,
 - centered circular composition,
 - no watch case,
-- no bezel hardware unless it is part of the graphic dial itself,
-- no crown,
-- no lugs,
-- no strap,
-- no wrist or hand,
-- no lifestyle scene,
-- no product box,
-- no perspective tilt,
+- no crown, lugs, buttons, strap, bracelet, wrist, hand, lifestyle scene, packaging, or perspective tilt,
 - no reflective glass obscuring information.
 
 ## Workflow
-1. Translate the approved architecture into explicit visual instructions.
-2. Describe hierarchy before decoration.
-3. Specify geometry, zones, relative placement, typography class, hands/indices when applicable, palette, texture, lighting, and information density.
-4. Include negative constraints against forbidden whole-watch elements.
-5. Avoid vague words such as 'cool', 'premium', or 'futuristic' unless followed by concrete visual meaning.
-6. Do not reference competitor brand names as a shortcut for style.
+1. Start from the approved commercial thesis, not from a competitor image or brand name.
+2. Describe object/framing first, then information hierarchy, then geometry, then styling.
+3. Define which element owns primary time readability.
+4. Specify layout zones, relative positions, spacing logic, typography class, hands/indices where applicable, complication count, palette, texture, and information density.
+5. Design around image-generator weaknesses: minimize unnecessary microtext, avoid fragile ornament, and demand clean numerals/indices.
+6. Add explicit negative constraints against whole-watch leakage and malformed geometry.
+7. Keep physical-product rendering cues out of the prompt unless explicitly required.
+8. After a failed generation, change only the controls related to the observed defect before regenerating.
 
 ## Output
-Return one production prompt in English, optimized for image generation, plus a short negative-constraints line if the generator benefits from it.
+Return one production prompt in English plus concise negative constraints when useful.
+
+## Regression discipline
+Record reusable prompt learnings only after real generations. Separate:
+- observed failure,
+- control changed,
+- observed result.
+
+Do not declare one successful wording a universal rule from a single sample.
 
 ## Quality gate
 Reject and rewrite the prompt if:
 - it could plausibly generate a complete physical watch,
 - the main time hierarchy is ambiguous,
 - key layout relationships are unspecified,
-- it relies on another brand's identity rather than explicit design language.
+- it relies on another brand's identity,
+- it requests excessive microtext or geometry too fragile for reliable generation.
