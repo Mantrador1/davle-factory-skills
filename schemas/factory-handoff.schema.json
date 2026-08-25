@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "davle://schemas/factory-handoff.schema.json",
+  "title": "DAVLE Factory Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["concept_id", "created_at", "market_rationale", "commercial_thesis", "generation_prompt", "dial_image", "visual_spec", "qa"],
+  "properties": {
+    "concept_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string"},
+    "market_rationale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "evidence_confidence"],
+      "properties": {
+        "summary": {"type": "string", "minLength": 1},
+        "evidence_confidence": {"enum": ["high", "medium", "low"]},
+        "top_signals": {"type": "array", "items": {"type": "string"}},
+        "major_risks": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "commercial_thesis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_user", "category", "primary_visual_hook", "information_hierarchy", "layout_philosophy", "color_strategy", "typography_direction", "complication_strategy", "differentiation"],
+      "properties": {
+        "target_user": {"type": "string"},
+        "category": {"type": "string"},
+        "primary_visual_hook": {"type": "string"},
+        "information_hierarchy": {"type": "string"},
+        "layout_philosophy": {"type": "string"},
+        "color_strategy": {"type": "string"},
+        "typography_direction": {"type": "string"},
+        "complication_strategy": {"type": "string"},
+        "premium_level": {"type": ["string", "null"]},
+        "differentiation": {"type": "string"},
+        "purchase_logic": {"type": ["string", "null"]}
+      }
+    },
+    "opportunity_score": {
+      "type": ["object", "null"],
+      "additionalProperties": true
+    },
+    "generation_prompt": {"type": "string", "minLength": 1},
+    "dial_image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference"],
+      "properties": {
+        "reference": {"type": "string", "minLength": 1},
+        "width": {"type": ["integer", "null"], "minimum": 1},
+        "height": {"type": ["integer", "null"], "minimum": 1}
+      }
+    },
+    "visual_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dial_only", "view", "shape", "primary_time", "complications", "palette", "implementation_notes"],
+      "properties": {
+        "dial_only": {"const": true},
+        "view": {"const": "front-facing-orthographic"},
+        "shape": {"const": "circular"},
+        "primary_time": {"type": "string"},
+        "complications": {"type": "array", "items": {"type": "string"}},
+        "palette": {"type": "array", "items": {"type": "string"}},
+        "typography_notes": {"type": ["string", "null"]},
+        "geometry_notes": {"type": ["string", "null"]},
+        "implementation_notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "qa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verdict", "dial_only", "front_facing", "geometry", "readability", "commercial_consistency", "originality", "factory_suitability"],
+      "properties": {
+        "verdict": {"enum": ["ACCEPT", "REVISE", "REJECT"]},
+        "dial_only": {"enum": ["PASS", "FAIL"]},
+        "front_facing": {"enum": ["PASS", "FAIL"]},
+        "geometry": {"enum": ["PASS", "FAIL"]},
+        "readability": {"enum": ["PASS", "FAIL"]},
+        "commercial_consistency": {"enum": ["PASS", "FAIL"]},
+        "originality": {"enum": ["PASS", "FAIL"]},
+        "factory_suitability": {"enum": ["PASS", "FAIL"]},
+        "defects": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
