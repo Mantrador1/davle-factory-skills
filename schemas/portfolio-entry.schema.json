@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "davle://schemas/portfolio-entry.schema.json",
+  "title": "DAVLE Portfolio Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["concept_id", "status", "display_mode", "style_cluster", "target_user", "primary_visual_hook"],
+  "properties": {
+    "concept_id": {"type": "string", "minLength": 1},
+    "product_name": {"type": ["string", "null"]},
+    "status": {"enum": ["concept", "production", "released", "abandoned"]},
+    "release_date": {"type": ["string", "null"]},
+    "display_mode": {"enum": ["analog", "digital", "hybrid", "other"]},
+    "style_cluster": {"type": "string", "minLength": 1},
+    "target_user": {"type": "string", "minLength": 1},
+    "primary_visual_hook": {"type": "string", "minLength": 1},
+    "layout_signature": {"type": ["string", "null"]},
+    "information_density": {"enum": ["low", "medium", "high", "unknown"]},
+    "complication_strategy": {"type": ["string", "null"]},
+    "color_strategy": {"type": ["string", "null"]},
+    "typography_direction": {"type": ["string", "null"]},
+    "premium_level": {"type": ["string", "null"]},
+    "store_thumbnail_signature": {"type": ["string", "null"]},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
