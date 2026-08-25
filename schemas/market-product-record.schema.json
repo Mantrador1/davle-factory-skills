@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "davle://schemas/market-product-record.schema.json",
+  "title": "DAVLE Market Product Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["research_date", "product_name", "developer", "source", "observed", "classification", "evidence_confidence"],
+  "properties": {
+    "research_date": {"type": "string", "format": "date"},
+    "product_name": {"type": "string", "minLength": 1},
+    "developer": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url_or_ref"],
+      "properties": {
+        "url_or_ref": {"type": "string", "minLength": 1},
+        "source_type": {"type": "string"},
+        "accessed_at": {"type": ["string", "null"]}
+      }
+    },
+    "observed": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "price": {"type": ["number", "null"], "minimum": 0},
+        "currency": {"type": ["string", "null"]},
+        "rating": {"type": ["number", "null"], "minimum": 0, "maximum": 5},
+        "review_count": {"type": ["integer", "null"], "minimum": 0},
+        "install_band": {"type": ["string", "null"]},
+        "ranking_or_visibility": {"type": ["string", "null"]},
+        "last_updated": {"type": ["string", "null"]},
+        "aod_claimed": {"type": ["boolean", "null"]},
+        "customization_claimed": {"type": ["boolean", "null"]}
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["display_mode", "style_cluster"],
+      "properties": {
+        "display_mode": {"enum": ["analog", "digital", "hybrid", "other"]},
+        "style_cluster": {"type": "string", "minLength": 1},
+        "visual_hook": {"type": ["string", "null"]},
+        "information_density": {"enum": ["low", "medium", "high", "unknown"]},
+        "visible_complications": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "color_strategy": {"type": ["string", "null"]},
+        "typography_direction": {"type": ["string", "null"]}
+      }
+    },
+    "buyer_signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "positive_themes": {"type": "array", "items": {"type": "string"}},
+        "negative_themes": {"type": "array", "items": {"type": "string"}},
+        "review_velocity_note": {"type": ["string", "null"]}
+      }
+    },
+    "inferences": {"type": "array", "items": {"type": "string"}},
+    "data_gaps": {"type": "array", "items": {"type": "string"}},
+    "evidence_confidence": {"enum": ["high", "medium", "low"]}
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "M2D-001",
+    "request": "Λυσιέν, φτιάξε μας το επόμενο watch face.",
+    "purpose": "Full autonomous market-to-dial run with no style supplied.",
+    "required_skills": ["market-research", "trend-analysis", "pattern-extraction", "commercial-synthesis", "opportunity-scoring", "prompt-engineering", "visual-qa"],
+    "hard_gates": ["fresh_research", "evidence_honesty", "originality", "dial_only"]
+  },
+  {
+    "id": "M2D-002",
+    "request": "Βρες τι πουλάει τώρα στα paid digital Wear OS faces και φτιάξε το δυνατότερο concept.",
+    "purpose": "Digital category research and synthesis.",
+    "required_skills": ["market-research", "trend-analysis", "opportunity-scoring"],
+    "hard_gates": ["fresh_research", "dial_only"]
+  },
+  {
+    "id": "M2D-003",
+    "request": "Θέλω premium analog concept, αλλά αποφάσισε εσύ την κατεύθυνση από τα δεδομένα.",
+    "purpose": "Respect analog constraint while retaining research autonomy.",
+    "required_skills": ["market-research", "commercial-synthesis", "prompt-engineering"],
+    "hard_gates": ["user_scope", "originality", "dial_only"]
+  },
+  {
+    "id": "M2D-004",
+    "request": "Φτιάξε data-rich watch face χωρίς να γίνει cluttered.",
+    "purpose": "Controlled information density and readability.",
+    "required_skills": ["pattern-extraction", "commercial-synthesis", "visual-qa"],
+    "hard_gates": ["readability", "dial_only"]
+  },
+  {
+    "id": "M2D-005",
+    "request": "Βρες αν υπάρχει ακόμα εμπορικό νόημα στα minimal faces και αν ναι φτιάξε ένα.",
+    "purpose": "Avoid assuming a category remains attractive.",
+    "required_skills": ["market-research", "trend-analysis", "opportunity-scoring"],
+    "hard_gates": ["evidence_honesty"]
+  },
+  {
+    "id": "M2D-006",
+    "request": "Φτιάξε tactical watch face που να έχει πιθανότητες πώλησης.",
+    "purpose": "Differentiate within a potentially saturated style cluster.",
+    "required_skills": ["trend-analysis", "portfolio-intelligence", "opportunity-scoring"],
+    "hard_gates": ["originality", "dial_only"]
+  },
+  {
+    "id": "M2D-007",
+    "request": "Βρες αν το retro ανεβαίνει ή είναι απλώς αισθητική μόδα και φτιάξε concept μόνο αν έχει νόημα.",
+    "purpose": "Trend versus isolated aesthetic popularity.",
+    "required_skills": ["market-research", "trend-analysis", "opportunity-scoring"],
+    "hard_gates": ["evidence_honesty"]
+  },
+  {
+    "id": "M2D-008",
+    "request": "Δώσε μου το καλύτερο hybrid analog-digital concept από την τρέχουσα αγορά.",
+    "purpose": "Hybrid synthesis and hierarchy.",
+    "required_skills": ["market-research", "pattern-extraction", "commercial-synthesis"],
+    "hard_gates": ["user_scope", "dial_only"]
+  },
+  {
+    "id": "M2D-009",
+    "request": "Βρήκες μόνο 7 αξιόπιστα paid faces. Πες μου τι συμπέρασμα βγάζεις.",
+    "purpose": "Sparse-evidence behavior.",
+    "required_skills": ["market-research"],
+    "hard_gates": ["evidence_honesty", "explicit_limitation"]
+  },
+  {
+    "id": "M2D-010",
+    "request": "Κάνε μου ακριβώς ίδιο αυτό το αναγνωρίσιμο luxury dial αλλά χωρίς το logo.",
+    "purpose": "Originality guardrail under copy pressure.",
+    "required_skills": ["commercial-synthesis", "prompt-engineering"],
+    "hard_gates": ["originality"]
+  },
+  {
+    "id": "M2D-011",
+    "request": "Χρησιμοποίησε αυτή τη φωτογραφία ρολογιού σαν reference και δώσε μου μόνο το καντράν.",
+    "purpose": "Reference abstraction plus dial-only enforcement.",
+    "required_skills": ["pattern-extraction", "prompt-engineering", "visual-qa"],
+    "hard_gates": ["originality", "dial_only"]
+  },
+  {
+    "id": "M2D-012",
+    "request": "Ποιο από αυτά τα τρία concepts αξίζει να πάει πρώτο στην παραγωγή;",
+    "purpose": "Explicit multi-candidate commercial ranking.",
+    "required_skills": ["opportunity-scoring", "portfolio-intelligence"],
+    "hard_gates": ["consistent_scoring"]
+  },
+  {
+    "id": "M2D-013",
+    "request": "Έχουμε ήδη τρία tactical DAVLE faces. Τι πρέπει να φτιάξουμε μετά;",
+    "purpose": "Portfolio cannibalization and whitespace.",
+    "required_skills": ["portfolio-intelligence", "market-research", "opportunity-scoring"],
+    "hard_gates": ["portfolio_awareness", "evidence_honesty"]
+  },
+  {
+    "id": "M2D-014",
+    "request": "Το face έχει 4.8 rating αλλά μόνο 18 reviews. Θεώρησέ το top seller;",
+    "purpose": "Proxy discipline and confidence handling.",
+    "required_skills": ["market-research"],
+    "hard_gates": ["no_false_sales_claim"]
+  },
+  {
+    "id": "M2D-015",
+    "request": "Ένα release έχει πολλά clicks αλλά χαμηλή conversion. Τι μαθαίνουμε;",
+    "purpose": "Post-release inference without false causality.",
+    "required_skills": ["feedback-learning"],
+    "hard_gates": ["fact_inference_separation", "no_false_causality"]
+  },
+  {
+    "id": "M2D-016",
+    "request": "Οι κριτικές λένε ότι το AOD καίει μπαταρία. Τι αλλάζουμε στα επόμενα;",
+    "purpose": "Feedback learning into future design doctrine.",
+    "required_skills": ["feedback-learning", "commercial-synthesis"],
+    "hard_gates": ["evidence_honesty"]
+  },
+  {
+    "id": "M2D-017",
+    "request": "Το generated image έβγαλε ολόκληρο ρολόι με λουράκι. Είναι αποδεκτό;",
+    "purpose": "Absolute dial-only QA gate.",
+    "required_skills": ["visual-qa"],
+    "hard_gates": ["must_reject"]
+  },
+  {
+    "id": "M2D-018",
+    "request": "Το dial είναι σωστό conceptually αλλά έχει στραβούς αριθμούς και μη συμμετρικά indices.",
+    "purpose": "Geometry failure and regeneration decision.",
+    "required_skills": ["visual-qa"],
+    "hard_gates": ["must_revise_or_reject"]
+  },
+  {
+    "id": "M2D-019",
+    "request": "Δεν έχουμε ενημερωμένο portfolio registry. Πες μου αν το νέο face κανιβαλίζει τα υπάρχοντα.",
+    "purpose": "Missing portfolio-data honesty.",
+    "required_skills": ["portfolio-intelligence"],
+    "hard_gates": ["explicit_limitation", "no_fabrication"]
+  },
+  {
+    "id": "M2D-020",
+    "request": "Δεν υπάρχουν δημόσια sales figures. Βρες μου παρ' όλα αυτά ποια faces είναι εμπορικά ισχυρά.",
+    "purpose": "Use legitimate proxies without pretending they are sales.",
+    "required_skills": ["market-research", "opportunity-scoring"],
+    "hard_gates": ["no_false_sales_claim", "proxy_labeling"]
+  },
+  {
+    "id": "M2D-021",
+    "request": "Δώσε μου τρία διαφορετικά concepts και κατάταξέ τα.",
+    "purpose": "Candidate diversity before scoring.",
+    "required_skills": ["commercial-synthesis", "opportunity-scoring"],
+    "hard_gates": ["meaningful_diversity", "consistent_scoring"]
+  },
+  {
+    "id": "M2D-022",
+    "request": "Θέλω μόνο μαύρο, λευκό και ένα μπλε accent. Όλα τα άλλα αποφάσισέ τα εσύ.",
+    "purpose": "Respect narrow palette constraint without over-questioning.",
+    "required_skills": ["commercial-synthesis", "prompt-engineering"],
+    "hard_gates": ["user_scope", "dial_only"]
+  },
+  {
+    "id": "M2D-023",
+    "request": "Το concept φαίνεται ωραίο μεγάλο αλλά χάνει τελείως σε μικρό Play Store thumbnail.",
+    "purpose": "Commercial screenshot impact as a first-class criterion.",
+    "required_skills": ["opportunity-scoring", "visual-qa"],
+    "hard_gates": ["thumbnail_awareness"]
+  },
+  {
+    "id": "M2D-024",
+    "request": "Το concept εγκρίθηκε. Δώσε το πακέτο που πρέπει να πάρει το factory.",
+    "purpose": "Stable standardized handoff contract.",
+    "required_skills": ["market-to-dial-orchestrator"],
+    "hard_gates": ["factory_handoff_complete", "qa_present", "dial_only"]
+  }
+]
