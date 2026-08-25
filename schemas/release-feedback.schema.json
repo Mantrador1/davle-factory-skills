@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "davle://schemas/release-feedback.schema.json",
+  "title": "DAVLE Release Feedback",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["concept_id", "observation_window", "observed_results", "interpretations", "learnings"],
+  "properties": {
+    "concept_id": {"type": "string", "minLength": 1},
+    "observation_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {"type": "string"},
+        "end": {"type": "string"},
+        "markets": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "price": {"type": ["number", "null"], "minimum": 0},
+        "currency": {"type": ["string", "null"]},
+        "promotion_state": {"type": ["string", "null"]},
+        "version": {"type": ["string", "null"]},
+        "traffic_notes": {"type": ["string", "null"]},
+        "listing_asset_notes": {"type": ["string", "null"]}
+      }
+    },
+    "observed_results": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "impressions": {"type": ["integer", "null"], "minimum": 0},
+        "store_views": {"type": ["integer", "null"], "minimum": 0},
+        "installs": {"type": ["integer", "null"], "minimum": 0},
+        "conversion_rate": {"type": ["number", "null"], "minimum": 0},
+        "rating": {"type": ["number", "null"], "minimum": 0, "maximum": 5},
+        "review_count": {"type": ["integer", "null"], "minimum": 0},
+        "retention_note": {"type": ["string", "null"]},
+        "review_themes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "interpretations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["statement", "confidence"],
+        "properties": {
+          "statement": {"type": "string", "minLength": 1},
+          "confidence": {"enum": ["high", "medium", "low"]},
+          "possible_confounders": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "learnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["learning", "confidence", "recommended_target"],
+        "properties": {
+          "learning": {"type": "string", "minLength": 1},
+          "confidence": {"enum": ["high", "medium", "low"]},
+          "recommended_target": {"enum": ["market-research", "trend-analysis", "pattern-extraction", "commercial-synthesis", "opportunity-scoring", "prompt-engineering", "visual-qa", "portfolio-intelligence", "none"]}
+        }
+      }
+    }
+  }
+}
