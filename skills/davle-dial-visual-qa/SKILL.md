@@ -10,6 +10,8 @@ Decide whether a generated dial is commercially coherent, visually clean, faithf
 
 Read `references/qa-gates.md` before evaluating a production candidate.
 
+For analog, vintage, mechanical, pointer-gauge, retrograde, or hand-heavy dials, also apply `davle-horology-dial-engineering` as a geometry/period-authenticity gate.
+
 ## Evaluation order
 1. Check hard gates before aesthetic scoring.
 2. Compare the image against the approved commercial thesis.
@@ -26,7 +28,11 @@ A candidate cannot be ACCEPTED when any of these are present:
 - broken circular/radial geometry,
 - malformed critical numerals or duplicated essential markers,
 - obvious copied branding or recognizable competitor identity,
-- major mismatch with the approved concept.
+- major mismatch with the approved concept,
+- mechanically impossible pointer/scale geometry when the concept uses analog gauges,
+- curved moving pointer pretending to follow an arc,
+- hour/minute hand collision with the bezel or wrong track relationship,
+- unintended fill inside a requested open/skeleton hand.
 
 ## Scoring
 Score 1–5:
@@ -38,7 +44,8 @@ Score 1–5:
 - visual polish,
 - commercial thumbnail impact,
 - originality,
-- factory usability.
+- factory usability,
+- horological plausibility when applicable.
 
 Require all hard gates to pass and average score >=4.0 for ACCEPT.
 
