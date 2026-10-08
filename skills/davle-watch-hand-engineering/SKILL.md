@@ -34,6 +34,16 @@ Measure from center pivot to tip using dial radius R:
 
 These are design targets, not universal laws. The visual rule is mandatory: hour < minute, and the minute tip must read the minute track without touching the bezel.
 
+## DAVLE minute-hand proportion rule
+
+When the user does not specify a different minute-hand length, compute the minute-hand tip radius from the hour-hand tip radius and the usable inner-bezel radius:
+
+`L_minute = L_hour + 0.5 × (R_inner_bezel - L_hour)`
+
+Equivalent interpretation: the minute-hand tip sits exactly halfway between the hour-hand tip and the inner edge of the outer bezel.
+
+This DAVLE rule overrides the broader generic proportional envelope for edit tasks unless the user explicitly requests another length. The minute hand must still remain visibly longer than the hour hand, simple in silhouette, and must not touch the bezel.
+
 ## Hand architecture
 
 ### Hour hand
