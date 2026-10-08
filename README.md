@@ -12,10 +12,11 @@ The current upstream intelligence/creative pipeline is:
 4. `davle-watchface-portfolio-intelligence`
 5. `davle-commercial-dial-synthesis`
 6. `davle-watchface-opportunity-scoring`
-7. `davle-dial-prompt-engineering`
-8. image generation capability
-9. `davle-dial-visual-qa`
-10. standardized factory handoff
+7. `davle-horology-dial-engineering` when analog/mechanical/vintage/gauge logic is involved
+8. `davle-dial-prompt-engineering`
+9. image generation capability
+10. `davle-dial-visual-qa`
+11. standardized factory handoff
 
 Post-release learning uses:
 
@@ -44,6 +45,7 @@ The GitHub repository is the source of truth. Agents should read the latest rele
 Regression assets:
 
 - `evals/market-to-dial-cases.json`
+- `evals/horology-dial-cases.json`
 - `evals/market-to-dial-rubric.md`
 - `evals/score_eval.py`
 - `evals/validate_skill_library.py`
@@ -56,4 +58,4 @@ Older flat Markdown files under `skills/` such as `MARKET_INTEL_v1.md`, `LYSIEN_
 
 ## Core Principle
 
-Market evidence → trend signal → reusable patterns → original commercial synthesis → opportunity selection → dial-only generation → hard-gated visual QA → factory handoff → real-world feedback learning.
+Market evidence → trend signal → reusable patterns → original commercial synthesis → opportunity selection → horological engineering when applicable → dial-only generation → hard-gated visual QA → factory handoff → real-world feedback learning.
