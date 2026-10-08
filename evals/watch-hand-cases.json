@@ -1,0 +1,124 @@
+{
+  "skill": "davle-watch-hand-engineering",
+  "cases": [
+    {
+      "id": "hour_shorter_than_minute",
+      "input": "Central skeleton hour/minute hands on a dense dial.",
+      "must": [
+        "hour radial reach shorter than minute",
+        "minute reaches minute track"
+      ],
+      "must_not": [
+        "hour longer than minute",
+        "equal-length ambiguous hands"
+      ]
+    },
+    {
+      "id": "open_skeleton",
+      "input": "Remove all white from hand interiors.",
+      "must": [
+        "open void",
+        "metal frame only"
+      ],
+      "must_not": [
+        "white fill",
+        "cream fill",
+        "black filler"
+      ]
+    },
+    {
+      "id": "minute_overlap_allowed",
+      "input": "Minute hand must be long even if it crosses information.",
+      "must": [
+        "preserve correct minute length"
+      ],
+      "must_not": [
+        "shorten to avoid complications"
+      ]
+    },
+    {
+      "id": "bezel_clearance",
+      "input": "Minute hand almost touches bezel.",
+      "must": [
+        "tip just inside minute track"
+      ],
+      "must_not": [
+        "bezel collision"
+      ]
+    },
+    {
+      "id": "goal_pointer_radial",
+      "input": "GOAL arc 0-100 with vintage red pointer.",
+      "must": [
+        "fixed pivot",
+        "straight pointer",
+        "radial intersection",
+        "concentric scale"
+      ],
+      "must_not": [
+        "curved pointer",
+        "tangent needle"
+      ]
+    },
+    {
+      "id": "move_pivot_inward",
+      "input": "Needle is too close to arc and not perpendicular.",
+      "must": [
+        "move pivot farther inward",
+        "lengthen pointer",
+        "hide root under plate if needed"
+      ],
+      "must_not": [
+        "leave pivot near arc"
+      ]
+    },
+    {
+      "id": "full_arc_sweep",
+      "input": "One pointer must read every tick from 0 to 100.",
+      "must": [
+        "equal-radius endpoints",
+        "one fixed center"
+      ],
+      "must_not": [
+        "multiple effective centers"
+      ]
+    },
+    {
+      "id": "1960s_style",
+      "input": "Vintage 1960s skeleton hands.",
+      "must": [
+        "restrained openworked baton/alpha/syringe language"
+      ],
+      "must_not": [
+        "sci-fi blade",
+        "neon insert"
+      ]
+    },
+    {
+      "id": "edit_lock",
+      "input": "Change only hands and GOAL pointer.",
+      "must": [
+        "preserve all unrelated dial elements"
+      ],
+      "must_not": [
+        "change complications",
+        "change typography",
+        "move logo",
+        "change textures"
+      ]
+    },
+    {
+      "id": "stacking",
+      "input": "Hour, minute and seconds hands share center.",
+      "must": [
+        "parallel hands",
+        "even spacing",
+        "no contact"
+      ],
+      "must_not": [
+        "sloped hand",
+        "collision"
+      ]
+    }
+  ]
+}

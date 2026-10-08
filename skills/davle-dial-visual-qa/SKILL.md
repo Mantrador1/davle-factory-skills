@@ -10,7 +10,7 @@ Decide whether a generated dial is commercially coherent, visually clean, faithf
 
 Read `references/qa-gates.md` before evaluating a production candidate.
 
-For analog, vintage, mechanical, pointer-gauge, retrograde, or hand-heavy dials, also apply `davle-horology-dial-engineering` as a geometry/period-authenticity gate.
+For analog, vintage, mechanical, pointer-gauge, retrograde, or hand-heavy dials, also apply `davle-horology-dial-engineering` as a geometry/period-authenticity gate. When central hands or gauge pointers are present, apply `davle-watch-hand-engineering` as a hard hand-geometry gate.
 
 ## Evaluation order
 1. Check hard gates before aesthetic scoring.
@@ -32,7 +32,10 @@ A candidate cannot be ACCEPTED when any of these are present:
 - mechanically impossible pointer/scale geometry when the concept uses analog gauges,
 - curved moving pointer pretending to follow an arc,
 - hour/minute hand collision with the bezel or wrong track relationship,
-- unintended fill inside a requested open/skeleton hand.
+- unintended fill inside a requested open/skeleton hand,
+- hour hand equal to or longer than the minute hand,
+- gauge pointer visibly tangent to its arc because the pivot is too close,
+- pointer unable to sweep the full scale from one fixed pivot.
 
 ## Scoring
 Score 1–5:

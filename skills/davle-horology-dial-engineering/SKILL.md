@@ -12,6 +12,8 @@ Read:
 - `references/horology-geometry.md`
 - `references/vintage-1960s-instrument-language.md`
 
+When central watch hands or gauge pointers are a primary design/edit target, also run `davle-watch-hand-engineering`; its stricter hand hierarchy and pointer-geometry rules override generic styling preferences.
+
 ## Trigger conditions
 Run this skill when any request includes one or more of:
 - hour/minute/seconds hands,

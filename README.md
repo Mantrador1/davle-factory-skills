@@ -13,10 +13,11 @@ The current upstream intelligence/creative pipeline is:
 5. `davle-commercial-dial-synthesis`
 6. `davle-watchface-opportunity-scoring`
 7. `davle-horology-dial-engineering` when analog/mechanical/vintage/gauge logic is involved
-8. `davle-dial-prompt-engineering`
-9. image generation capability
-10. `davle-dial-visual-qa`
-11. standardized factory handoff
+8. `davle-watch-hand-engineering` when watch hands or gauge pointers are created/edited
+9. `davle-dial-prompt-engineering`
+10. image generation capability
+11. `davle-dial-visual-qa`
+12. standardized factory handoff
 
 Post-release learning uses:
 
@@ -46,6 +47,7 @@ Regression assets:
 
 - `evals/market-to-dial-cases.json`
 - `evals/horology-dial-cases.json`
+- `evals/watch-hand-cases.json`
 - `evals/market-to-dial-rubric.md`
 - `evals/score_eval.py`
 - `evals/validate_skill_library.py`

@@ -10,7 +10,7 @@ Produce a generation prompt that preserves the approved commercial thesis while 
 
 Read `references/prompt-controls.md` when building or correcting a production prompt.
 
-When the approved concept includes analog hands, pointer gauges, retrograde arcs, vintage/tool-watch language, or horological/mechanical styling, read and apply `davle-horology-dial-engineering` before writing the production prompt.
+When the approved concept includes analog hands, pointer gauges, retrograde arcs, vintage/tool-watch language, or horological/mechanical styling, read and apply `davle-horology-dial-engineering` before writing the production prompt. If hands/pointers are being created or corrected, also apply `davle-watch-hand-engineering` and encode its hour<minute reach hierarchy, true-open skeleton rule, and fixed-pivot radial scale geometry explicitly.
 
 ## Mandatory framing
 Always specify:
