@@ -17,11 +17,12 @@ Run the complete modular workflow while preserving evidence boundaries and letti
 6. Generate 2–3 meaningful candidate theses for open-ended tasks, or one candidate for a narrow user-specified direction.
 7. Run `davle-watchface-opportunity-scoring` on competing candidates. Select one PRODUCE candidate; do not force production when every candidate is HOLD/DO_NOT_PRODUCE.
 8. If the winner has HIGH cannibalization risk, modify or replace it and rescore before generation.
-9. Pass the approved thesis to `davle-dial-prompt-engineering`.
-10. Generate only the dial image using the available image-generation capability.
-11. Run `davle-dial-visual-qa`.
-12. If QA returns REVISE and the defect is concretely correctable, regenerate using targeted correction instructions and re-run QA. Stop rather than falsely ACCEPT if a critical defect remains.
-13. Build the final handoff using `schemas/factory-handoff.schema.json` when available.
+9. If the approved thesis uses analog hands, pointer gauges, retrograde arcs, vintage/tool-watch language, or mechanical watchmaking cues, run `davle-horology-dial-engineering` and lock its geometry constraints.
+10. Pass the approved thesis plus any horology handoff to `davle-dial-prompt-engineering`.
+11. Generate only the dial image using the available image-generation capability.
+12. Run `davle-dial-visual-qa`, including horological plausibility gates when applicable.
+13. If QA returns REVISE and the defect is concretely correctable, regenerate using targeted correction instructions and re-run QA. Stop rather than falsely ACCEPT if a critical defect remains.
+14. Build the final handoff using `schemas/factory-handoff.schema.json` when available.
 
 ## Evidence rules
 - Keep OBSERVED FACT, INFERENCE, and CREATIVE DECISION distinct.

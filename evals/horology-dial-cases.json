@@ -1,0 +1,104 @@
+{
+  "skill": "davle-horology-dial-engineering",
+  "cases": [
+    {
+      "id": "retrograde_goal_pointer",
+      "input": "Goal scale is a curved 0-100 arc. User asks for a vintage red pointer.",
+      "must": [
+        "fixed pivot",
+        "straight pointer",
+        "concentric arc",
+        "radial reading"
+      ],
+      "must_not": [
+        "curved moving pointer",
+        "pointer sliding along arc"
+      ]
+    },
+    {
+      "id": "skeleton_empty",
+      "input": "Remove white interior from skeleton hour/minute hands.",
+      "must": [
+        "open void",
+        "metal frame preserved"
+      ],
+      "must_not": [
+        "white fill",
+        "black fill",
+        "lume insert"
+      ]
+    },
+    {
+      "id": "minute_too_long",
+      "input": "Minute hand nearly touches bezel.",
+      "must": [
+        "shorten minute hand",
+        "tip remains near minute track"
+      ],
+      "must_not": [
+        "change unrelated dial modules"
+      ]
+    },
+    {
+      "id": "1960s_vintage",
+      "input": "Make hands vintage 1960s.",
+      "must": [
+        "mid-century tool-watch language",
+        "restrained geometry",
+        "period-coherent finish"
+      ],
+      "must_not": [
+        "cyberpunk",
+        "neon sci-fi",
+        "steampunk excess"
+      ]
+    },
+    {
+      "id": "battery_arc_no_pointer",
+      "input": "Battery is fill-only arc with red low zone.",
+      "must": [
+        "explicit zero/full orientation",
+        "background track",
+        "stateful fill"
+      ],
+      "must_not": [
+        "decorative pointer"
+      ]
+    },
+    {
+      "id": "edit_preservation",
+      "input": "Change only hands and one music icon.",
+      "must": [
+        "lock all other regions"
+      ],
+      "must_not": [
+        "layout redesign",
+        "color redesign",
+        "new complications"
+      ]
+    },
+    {
+      "id": "hand_clearance",
+      "input": "Dense dial with analog hands over data.",
+      "must": [
+        "skeleton/openwork if needed",
+        "clear center hub",
+        "readable tips"
+      ],
+      "must_not": [
+        "hand collision",
+        "bezel collision"
+      ]
+    },
+    {
+      "id": "pointer_scale_mismatch",
+      "input": "Existing arc is not centered on proposed pivot.",
+      "must": [
+        "move pivot or redesign arc or use fill-only"
+      ],
+      "must_not": [
+        "accept impossible geometry"
+      ]
+    }
+  ]
+}

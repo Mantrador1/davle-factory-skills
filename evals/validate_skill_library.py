@@ -12,6 +12,7 @@ REQUIRED_SKILLS = [
     "davle-commercial-dial-synthesis",
     "davle-watchface-opportunity-scoring",
     "davle-watchface-portfolio-intelligence",
+    "davle-horology-dial-engineering",
     "davle-dial-prompt-engineering",
     "davle-dial-visual-qa",
     "davle-watchface-feedback-learning",
@@ -85,6 +86,7 @@ def validate_orchestrator_links():
         "davle-watchface-portfolio-intelligence",
         "davle-commercial-dial-synthesis",
         "davle-watchface-opportunity-scoring",
+        "davle-horology-dial-engineering",
         "davle-dial-prompt-engineering",
         "davle-dial-visual-qa",
     ]
