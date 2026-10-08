@@ -119,6 +119,19 @@
         "sloped hand",
         "collision"
       ]
+    },
+    {
+      "id": "davle_minute_midpoint_rule",
+      "input": "Use DAVLE default minute hand length with known hour tip and inner bezel radius.",
+      "must": [
+        "L_minute = L_hour + 0.5 × (R_inner_bezel - L_hour)",
+        "minute longer than hour",
+        "minute not touching bezel"
+      ],
+      "must_not": [
+        "oversized minute hand",
+        "minute hand reaching bezel"
+      ]
     }
   ]
 }
