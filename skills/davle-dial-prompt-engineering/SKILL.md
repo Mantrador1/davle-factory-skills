@@ -10,6 +10,8 @@ Produce a generation prompt that preserves the approved commercial thesis while 
 
 Read `references/prompt-controls.md` when building or correcting a production prompt.
 
+When the approved concept includes analog hands, pointer gauges, retrograde arcs, vintage/tool-watch language, or horological/mechanical styling, read and apply `davle-horology-dial-engineering` before writing the production prompt.
+
 ## Mandatory framing
 Always specify:
 - dial artwork only,
@@ -27,7 +29,8 @@ Always specify:
 5. Design around image-generator weaknesses: minimize unnecessary microtext, avoid fragile ornament, and demand clean numerals/indices.
 6. Add explicit negative constraints against whole-watch leakage and malformed geometry.
 7. Keep physical-product rendering cues out of the prompt unless explicitly required.
-8. After a failed generation, change only the controls related to the observed defect before regenerating.
+8. For horology-sensitive concepts, explicitly encode fixed pivots, hand lengths, scale centers, pointer direction, open/skeleton regions, and locked edit regions from the horology handoff.
+9. After a failed generation, change only the controls related to the observed defect before regenerating.
 
 ## Output
 Return one production prompt in English plus concise negative constraints when useful.
