@@ -14,10 +14,14 @@ The current upstream intelligence/creative pipeline is:
 6. `davle-watchface-opportunity-scoring`
 7. `davle-horology-dial-engineering` when analog/mechanical/vintage/gauge logic is involved
 8. `davle-watch-hand-engineering` when watch hands or gauge pointers are created/edited
-9. `davle-dial-prompt-engineering`
-10. image generation capability
-11. `davle-dial-visual-qa`
-12. standardized factory handoff
+9. `davle-dial-structure-mapping` for source-image edits or exact layout preservation
+10. `davle-reference-edit-preservation` for surgical edits
+11. `davle-wff-production-feasibility` before factory handoff for dynamic/data-heavy concepts
+12. `davle-dial-prompt-engineering`
+13. image generation capability
+14. `davle-visual-regression-qa` for edits
+15. `davle-dial-visual-qa`
+16. standardized factory handoff
 
 Post-release learning uses:
 
@@ -48,6 +52,9 @@ Regression assets:
 - `evals/market-to-dial-cases.json`
 - `evals/horology-dial-cases.json`
 - `evals/watch-hand-cases.json`
+- `evals/edit-preservation-cases.json`
+- `evals/visual-regression-cases.json`
+- `evals/wff-feasibility-cases.json`
 - `evals/market-to-dial-rubric.md`
 - `evals/score_eval.py`
 - `evals/validate_skill_library.py`
@@ -60,4 +67,4 @@ Older flat Markdown files under `skills/` such as `MARKET_INTEL_v1.md`, `LYSIEN_
 
 ## Core Principle
 
-Market evidence → trend signal → reusable patterns → original commercial synthesis → opportunity selection → horological engineering when applicable → dial-only generation → hard-gated visual QA → factory handoff → real-world feedback learning.
+Market evidence → trend signal → reusable patterns → original commercial synthesis → opportunity selection → horological engineering when applicable → structure mapping/change control for edits → WFF feasibility → dial-only generation → visual regression + hard-gated QA → factory handoff → real-world feedback learning.
