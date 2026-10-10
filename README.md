@@ -16,12 +16,14 @@ The current upstream intelligence/creative pipeline is:
 8. `davle-watch-hand-engineering` when watch hands or gauge pointers are created/edited
 9. `davle-dial-structure-mapping` for source-image edits or exact layout preservation
 10. `davle-reference-edit-preservation` for surgical edits
-11. `davle-wff-production-feasibility` before factory handoff for dynamic/data-heavy concepts
-12. `davle-dial-prompt-engineering`
-13. image generation capability
-14. `davle-visual-regression-qa` for edits
-15. `davle-dial-visual-qa`
-16. standardized factory handoff
+11. `davle-surgical-compositing` for pixel-level locking when exact preservation is required
+12. `davle-wff-production-feasibility` before factory handoff for dynamic/data-heavy concepts
+13. `davle-dial-prompt-engineering`
+14. image generation capability
+15. `davle-surgical-compositing` when applicable
+16. `davle-visual-regression-qa` for edits
+17. `davle-dial-visual-qa`
+18. standardized factory handoff
 
 Post-release learning uses:
 
@@ -55,6 +57,7 @@ Regression assets:
 - `evals/edit-preservation-cases.json`
 - `evals/visual-regression-cases.json`
 - `evals/wff-feasibility-cases.json`
+- `evals/surgical-compositing-cases.json`
 - `evals/market-to-dial-rubric.md`
 - `evals/score_eval.py`
 - `evals/validate_skill_library.py`

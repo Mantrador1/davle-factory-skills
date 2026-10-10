@@ -58,6 +58,9 @@ For surgical edits:
 - expected changed area should be approximately limited to the mutable regions plus edge blending,
 - any large global change is presumptive failure.
 
+## Pixel-lock escalation
+When exact preservation is required and image-processing tools are available, run `davle-surgical-compositing` after generation so locked regions are restored directly from the original source image rather than merely trusted to the generator.
+
 ## Output
 Return:
 - edit contract,

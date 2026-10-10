@@ -1,0 +1,30 @@
+{
+  "skill": "davle-surgical-compositing",
+  "cases": [
+    {
+      "id": "hands_only",
+      "mask": "hand sweep + center hub",
+      "expected": "all other source pixels restored"
+    },
+    {
+      "id": "music_icon_only",
+      "mask": "music button interior",
+      "expected": "button surroundings identical"
+    },
+    {
+      "id": "text_cell",
+      "mask": "single text cell",
+      "expected": "other text identical"
+    },
+    {
+      "id": "feather_boundary",
+      "mask": "local region",
+      "expected": "minimal seam-safe blend"
+    },
+    {
+      "id": "drifted_candidate",
+      "mask": "small local region",
+      "expected": "global drift removed by source restoration"
+    }
+  ]
+}
