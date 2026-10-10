@@ -19,11 +19,14 @@ Run the complete modular workflow while preserving evidence boundaries and letti
 8. If the winner has HIGH cannibalization risk, modify or replace it and rescore before generation.
 9. If the approved thesis uses analog hands, pointer gauges, retrograde arcs, vintage/tool-watch language, or mechanical watchmaking cues, run `davle-horology-dial-engineering` and lock its geometry constraints.
 10. If central hands or gauge pointers are created, edited, resized or restyled, run `davle-watch-hand-engineering` and lock its hand/pivot constraints.
-11. Pass the approved thesis plus horology/hand-engineering handoffs to `davle-dial-prompt-engineering`.
-12. Generate only the dial image using the available image-generation capability.
-13. Run `davle-dial-visual-qa`, including horological and watch-hand plausibility gates when applicable.
-14. If QA returns REVISE and the defect is concretely correctable, regenerate using targeted correction instructions and re-run QA. Stop rather than falsely ACCEPT if a critical defect remains.
-15. Build the final handoff using `schemas/factory-handoff.schema.json` when available.
+11. If the task edits an existing approved/source dial, run `davle-dial-structure-mapping`, then `davle-reference-edit-preservation`; lock all unrequested regions.
+12. Run `davle-wff-production-feasibility` when the concept includes complications, AOD, animation, customization or dynamic Wear OS data.
+13. Pass the approved thesis plus horology/hand/edit/feasibility handoffs to `davle-dial-prompt-engineering`.
+14. Generate only the dial image using the available image-generation capability.
+15. For edits, run `davle-visual-regression-qa` against the approved source before general QA.
+16. Run `davle-dial-visual-qa`, including horological and watch-hand plausibility gates when applicable.
+17. If QA returns REVISE and the defect is concretely correctable, regenerate FROM THE ORIGINAL APPROVED SOURCE using targeted correction instructions and re-run both regression and visual QA. Stop rather than falsely ACCEPT if a critical defect remains.
+18. Build the final handoff using `schemas/factory-handoff.schema.json` when available.
 
 ## Evidence rules
 - Keep OBSERVED FACT, INFERENCE, and CREATIVE DECISION distinct.

@@ -12,6 +12,8 @@ Read `references/prompt-controls.md` when building or correcting a production pr
 
 When the approved concept includes analog hands, pointer gauges, retrograde arcs, vintage/tool-watch language, or horological/mechanical styling, read and apply `davle-horology-dial-engineering` before writing the production prompt. If hands/pointers are being created or corrected, also apply `davle-watch-hand-engineering` and encode its hour<minute reach hierarchy, true-open skeleton rule, and fixed-pivot radial scale geometry explicitly.
 
+When editing an existing approved/source dial, first apply `davle-dial-structure-mapping` and `davle-reference-edit-preservation`. The prompt must describe only mutable/dependent regions and explicitly lock everything else; do not re-describe the full dial in a way that invites global regeneration.
+
 ## Mandatory framing
 Always specify:
 - dial artwork only,
@@ -30,7 +32,8 @@ Always specify:
 6. Add explicit negative constraints against whole-watch leakage and malformed geometry.
 7. Keep physical-product rendering cues out of the prompt unless explicitly required.
 8. For horology-sensitive concepts, explicitly encode fixed pivots, hand lengths, scale centers, pointer direction, open/skeleton regions, and locked edit regions from the horology handoff.
-9. After a failed generation, change only the controls related to the observed defect before regenerating.
+9. For surgical edits, use the original approved source on every retry and preserve all locked regions.
+10. After a failed generation, change only the controls related to the observed defect before regenerating.
 
 ## Output
 Return one production prompt in English plus concise negative constraints when useful.

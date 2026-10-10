@@ -12,6 +12,8 @@ Read `references/qa-gates.md` before evaluating a production candidate.
 
 For analog, vintage, mechanical, pointer-gauge, retrograde, or hand-heavy dials, also apply `davle-horology-dial-engineering` as a geometry/period-authenticity gate. When central hands or gauge pointers are present, apply `davle-watch-hand-engineering` as a hard hand-geometry gate.
 
+For edits against an existing approved image, run `davle-visual-regression-qa` before final acceptance. Any material change in a locked region is a hard reject even when the new image is aesthetically stronger.
+
 ## Evaluation order
 1. Check hard gates before aesthetic scoring.
 2. Compare the image against the approved commercial thesis.
@@ -35,7 +37,8 @@ A candidate cannot be ACCEPTED when any of these are present:
 - unintended fill inside a requested open/skeleton hand,
 - hour hand equal to or longer than the minute hand,
 - gauge pointer visibly tangent to its arc because the pivot is too close,
-- pointer unable to sweep the full scale from one fixed pivot.
+- pointer unable to sweep the full scale from one fixed pivot,
+- material drift in any locked region during a surgical edit.
 
 ## Scoring
 Score 1–5:

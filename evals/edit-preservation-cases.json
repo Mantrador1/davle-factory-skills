@@ -1,0 +1,59 @@
+{
+  "skill": "davle-reference-edit-preservation",
+  "cases": [
+    {
+      "id": "hands_only",
+      "input": "Change only hour/minute hands.",
+      "must": [
+        "all other regions locked",
+        "source image reused"
+      ],
+      "must_not": [
+        "layout drift",
+        "text changes"
+      ]
+    },
+    {
+      "id": "icon_only",
+      "input": "Replace only music icon.",
+      "must": [
+        "single icon mutable"
+      ],
+      "must_not": [
+        "button relocation",
+        "font change"
+      ]
+    },
+    {
+      "id": "failed_derivative",
+      "input": "Prior generated edit drifted.",
+      "must": [
+        "restart from original approved source"
+      ],
+      "must_not": [
+        "continue from drifted derivative"
+      ]
+    },
+    {
+      "id": "dependent_geometry",
+      "input": "Move gauge pivot requiring only local scale dependency.",
+      "must": [
+        "pivot/scale marked dependent"
+      ],
+      "must_not": [
+        "global redesign"
+      ]
+    },
+    {
+      "id": "exact_text",
+      "input": "Keep all text unchanged.",
+      "must": [
+        "text locked"
+      ],
+      "must_not": [
+        "rewritten labels",
+        "changed values"
+      ]
+    }
+  ]
+}

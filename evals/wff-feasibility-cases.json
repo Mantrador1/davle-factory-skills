@@ -1,0 +1,26 @@
+{
+  "skill": "davle-wff-production-feasibility",
+  "cases": [
+    {
+      "id": "continuous_video",
+      "expected": "BUILDABLE_WITH_CHANGES",
+      "reason": "replace continuous video with short animation/fallback"
+    },
+    {
+      "id": "static_dial",
+      "expected": "BUILDABLE"
+    },
+    {
+      "id": "aod_full_brightness",
+      "expected": "BUILDABLE_WITH_CHANGES"
+    },
+    {
+      "id": "editable_complication_hard_label",
+      "expected": "BUILDABLE_WITH_CHANGES"
+    },
+    {
+      "id": "large_asset_stack",
+      "expected": "BUILDABLE_WITH_CHANGES"
+    }
+  ]
+}

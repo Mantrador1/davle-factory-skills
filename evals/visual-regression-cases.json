@@ -1,0 +1,35 @@
+{
+  "skill": "davle-visual-regression-qa",
+  "cases": [
+    {
+      "id": "logo_drift",
+      "must_fail": [
+        "logo moved"
+      ]
+    },
+    {
+      "id": "bezel_drift",
+      "must_fail": [
+        "bezel changed"
+      ]
+    },
+    {
+      "id": "allowed_hand_change",
+      "must_pass": [
+        "only hands changed"
+      ]
+    },
+    {
+      "id": "data_value_drift",
+      "must_fail": [
+        "locked value changed"
+      ]
+    },
+    {
+      "id": "patina_minor",
+      "must_pass": [
+        "tiny texture noise only"
+      ]
+    }
+  ]
+}
